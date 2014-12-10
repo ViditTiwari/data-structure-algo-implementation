@@ -2,6 +2,16 @@
 
 using namespace std;
 
+void printSet(int array[],int size){
+    int i;
+
+    for (i=1;i<=size;i++)
+        cout << array[i] << " ";
+        cout << endl;
+
+    return;
+}
+
 void printPowerset (int n){
     int stack[n+1],k;
 
