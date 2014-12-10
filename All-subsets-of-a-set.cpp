@@ -13,10 +13,11 @@ void printSet(int array[],int size){
 }
 
 void printPowerset (int n){
-    int stack[n+1],k;
+    int stack[n+1],k,ctr;
 
     stack[0]=0; /* 0 is not considered as part of the set */
     k = 0;
+    ctr=0;
 
     while(1){
         if (stack[k]<n){
@@ -34,10 +35,11 @@ void printPowerset (int n){
         ctr++;
         printSet(stack,k);
     }
-
+    cout<<"\nTotal no. of Subsets are: "<<ctr;
 
     return;
 }
+
 int main(){
     int n;
     cout<<"Enter the number\n";
